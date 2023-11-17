@@ -1,0 +1,24 @@
+[package]
+name = "nifpga-fifo-to-zmq"
+version = "0.1.1"
+edition = "2021"
+license = "MIT"
+authors = ["Mattia Donato"]
+about = "Unofficial program to read data from an NI FPGA FIFO send them to ZMQ PULL as fast as possible"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.2.7", features = ["derive", "cargo"] }
+fehler = "1.0.0"
+sysinfo = "0.29.0"
+crossbeam = "0.8"
+
+nifpga-dll-sys = "0.3.0"
+nifpga-dll-type-macro = "0.3.0"
+nifpga-dll = "0.3.0"
+
+zmq = "0.10.0"
+
+[build-dependencies]
+cc = "1.0.54"
